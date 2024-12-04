@@ -100,4 +100,42 @@ switch(workType){
   let monthlyWage = dailyWage * 20;
   console.log(`Monthly wage: $${monthlyWage}`);
 //USE CASE 5
-  
+const parttime = 4;
+const fulltime = 8;
+const wagePerHour = 20;
+let totalHoursWorked = 0;
+let totalDaysWorked = 0;
+let dailyWage = 0;
+let workType = 0; // 0: absent, 1: part-time, 2: full-time
+let totalWage = 0;
+
+while (totalHoursWorked < 160 && totalDaysWorked < 20) {
+    // Randomly selecting the work type (0 for absent, 1 for part-time, 2 for full-time)
+    workType = Math.floor(Math.random() * 3);
+    
+    switch (workType) {
+        case 0: // Absent
+            console.log("No work done or employee was absent.");
+            break;
+        case 1: // Part-time
+            dailyWage = parttime * wagePerHour;
+            totalHoursWorked += parttime;
+            totalDaysWorked++;
+            console.log(`Part-time work done. Daily wage: $${dailyWage}, Total hours worked: ${totalHoursWorked}`);
+            break;
+        case 2: // Full-time
+            dailyWage = fulltime * wagePerHour;
+            totalHoursWorked += fulltime;
+            totalDaysWorked++;
+            console.log(`Full-time work done. Daily wage: $${dailyWage}, Total hours worked: ${totalHoursWorked}`);
+            break;
+        default:
+            console.log("Invalid work type");
+    }
+    totalWage += dailyWage;
+}
+
+// Output final wage and total work hours
+console.log(`Total hours worked: ${totalHoursWorked}`);
+console.log(`Total days worked: ${totalDaysWorked}`);
+console.log(`Total wage for the month: $${totalWage}`);
