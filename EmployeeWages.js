@@ -100,6 +100,8 @@ switch(workType){
   let monthlyWage = dailyWage * 20;
   console.log(`Monthly wage: $${monthlyWage}`);
 //USE CASE 5
+// Calculate Wages till a  condition of total working hours of 160 or  max days of 20 is reached for a month
+
 const parttime = 4;
 const fulltime = 8;
 const wagePerHour = 20;
