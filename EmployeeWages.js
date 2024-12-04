@@ -72,3 +72,32 @@ switch(workType){
  let DailyWages = tocacalculateDailyWages(totalworkhours);
  console.log(`Employee Daily Wages: ${DailyWages}`);
 
+                //USE CASE 4     
+  //Calculating Wages for a Month assuming 20 days in a month
+  const parttime = 4;
+  const fulltime = 8;
+  const wagePerHour = 20;
+  let workType = Math.floor(Math.random() * 3);
+  let dailyWage = 0;
+  
+  switch (workType) {
+      case 0:
+          console.log("No work done or employee was absent. Daily wage: $0");
+          break;
+      case 1:
+          dailyWage = parttime * wagePerHour;
+          console.log(`Part-time work done. Daily wage: $${dailyWage}`);
+          break;
+      case 2:
+          dailyWage = fulltime * wagePerHour;
+          console.log(`Full-time work done. Daily wage: $${dailyWage}`);
+          break;
+      default:
+          console.log("Invalid work type");
+  }
+  
+  // Calculate monthly wage (assuming 20 workdays in a month)
+  let monthlyWage = dailyWage * 20;
+  console.log(`Monthly wage: $${monthlyWage}`);
+//USE CASE 5
+  
