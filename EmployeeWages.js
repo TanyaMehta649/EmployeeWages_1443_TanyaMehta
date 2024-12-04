@@ -1,3 +1,4 @@
+//USE CASE 1
 // Ability to Check Employee is 
 // present or Absent- Use Math.Random to check Absent or 
 // Present
@@ -13,4 +14,31 @@ if(ispresent===attendence){
 }
 else {
     console.log("employee is absent");
+}
+//USE CASE 2
+//ability to calculate daily employee wage based on part time/full time
+//Use Math.Random to check No Time, 
+// Part Time or Full Time- Assume Part Time is 4 Hrs and Full time 
+// is 8 Hrs and per hour wage is $20- Solve Using  Switch Statement
+const parttime=4;
+const fulltime=8;
+const wage=20;
+let workType = Math.floor(Math.random() * 3);
+let dailywage=0;
+switch(workType){
+    case 0:
+        dailywage=0;
+        console.log("no work done or employee was absent"+dailywage);
+    break;
+    case 1:
+    dailywage=parttime*wage;
+    console.log(dailywage);
+    break;
+    case 2:
+        dailywage=fulltime*wage;
+        console.log(dailywage);
+        break;
+        default:
+            console.log("not a vallid work");
+
 }
